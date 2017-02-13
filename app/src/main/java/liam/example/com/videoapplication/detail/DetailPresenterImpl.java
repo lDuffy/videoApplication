@@ -81,6 +81,7 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
         if (null == player) {
 
             player = PlayerUtils.getPlayer(context);
+            player.setPlaybackSpeed(1.0f);
             player.addListener(this);
             view.setPlayerView(player);
             player.setPlayWhenReady(true);

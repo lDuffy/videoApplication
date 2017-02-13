@@ -14,27 +14,19 @@ import liam.example.com.videoapplication.utils.RetrofitUtils;
 
 
 public class OkHttpIdlingResourceRule implements TestRule {
-    @Override
-    public Statement apply(Statement base, Description description) {
-        return new IdlingResourceStatement(base);
-    }
+  @Override
+  public Statement apply(Statement base, Description description) {
+    return new Statement() {
+      @Override
+      public void evaluate() throws Throwable {
+        IdlingResource idlingResource = OkHttp3IdlingResource.create(
+            "okhttp", RetrofitUtils.provideOkHttpClient());
+        Espresso.registerIdlingResources(idlingResource);
 
-    private static class IdlingResourceStatement extends Statement {
-        private final Statement base;
+        base.evaluate();
 
-        IdlingResourceStatement(Statement base) {
-            this.base = base;
-        }
-
-        @Override
-        public void evaluate() throws Throwable {
-            IdlingResource idlingResource = OkHttp3IdlingResource.create(
-                    "okhttp", RetrofitUtils.provideOkHttpClient());
-            Espresso.registerIdlingResources(idlingResource);
-
-            base.evaluate();
-
-            Espresso.unregisterIdlingResources(idlingResource);
-        }
-    }
+        Espresso.unregisterIdlingResources(idlingResource);
+      }
+    };
+  }
 }

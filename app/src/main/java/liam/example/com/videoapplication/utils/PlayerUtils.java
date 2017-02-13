@@ -32,7 +32,7 @@ public final class PlayerUtils {
                 new AdaptiveVideoTrackSelection.Factory(BANDWIDTH_METER);
         DefaultTrackSelector trackSelector = new DefaultTrackSelector(videoTrackSelectionFactory);
         SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(context, trackSelector, new DefaultLoadControl(),
-                null, SimpleExoPlayer.EXTENSION_RENDERER_MODE_OFF);
+                null, SimpleExoPlayer.EXTENSION_RENDERER_MODE_ON);
         player.setPlayWhenReady(true);
 
         return player;

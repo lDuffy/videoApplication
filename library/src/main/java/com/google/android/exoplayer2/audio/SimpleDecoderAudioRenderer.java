@@ -21,6 +21,10 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemClock;
 import android.support.annotation.IntDef;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
 import com.google.android.exoplayer2.BaseRenderer;
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
@@ -38,8 +42,6 @@ import com.google.android.exoplayer2.util.MediaClock;
 import com.google.android.exoplayer2.util.MimeTypes;
 import com.google.android.exoplayer2.util.TraceUtil;
 import com.google.android.exoplayer2.util.Util;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 
 /**
  * Decodes and renders audio using a {@link SimpleDecoder}.
@@ -401,6 +403,11 @@ public abstract class SimpleDecoderAudioRenderer extends BaseRenderer implements
       allowPositionDiscontinuity = false;
     }
     return currentPositionUs;
+  }
+
+  @Override
+  public void setPlaybackSpeed(float speed) {
+    audioTrack.setPlaybackSpeed(speed);
   }
 
   @Override
