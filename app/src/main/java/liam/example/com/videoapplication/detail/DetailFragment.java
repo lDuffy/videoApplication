@@ -3,6 +3,7 @@ package liam.example.com.videoapplication.detail;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ import static liam.example.com.videoapplication.detail.DetailContract.DetailPres
 
 public class DetailFragment extends Fragment implements DetailContract.DetailView {
 
+    public static final int VERSION_M = 23;
     @BindView(R.id.player_view) public SimpleExoPlayerView playerView;
     @BindView(R.id.progress) public ProgressBar progressBar;
     @Inject DetailContract.DetailPresenter detailPresenter;
@@ -54,7 +56,7 @@ public class DetailFragment extends Fragment implements DetailContract.DetailVie
     }
 
     private void hideActionBar() {
-        ((MainActivity) getActivity()).getSupportActionBar().hide();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
@@ -95,7 +97,7 @@ public class DetailFragment extends Fragment implements DetailContract.DetailVie
     @Override
     public void onResume() {
         super.onResume();
-        if (23 >= Util.SDK_INT) {
+        if (VERSION_M >= Util.SDK_INT) {
             detailPresenter.onViewAttached(this);
         }
     }
@@ -103,7 +105,7 @@ public class DetailFragment extends Fragment implements DetailContract.DetailVie
     @Override
     public void onPause() {
         super.onPause();
-        if (23 >= Util.SDK_INT) {
+        if (VERSION_M >= Util.SDK_INT) {
             detailPresenter.onViewDetached();
         }
     }
@@ -111,7 +113,7 @@ public class DetailFragment extends Fragment implements DetailContract.DetailVie
     @Override
     public void onStart() {
         super.onStart();
-        if (23 < Util.SDK_INT) {
+        if (VERSION_M < Util.SDK_INT) {
             detailPresenter.onViewAttached(this);
         }
 
@@ -120,7 +122,7 @@ public class DetailFragment extends Fragment implements DetailContract.DetailVie
     @Override
     public void onStop() {
         super.onStop();
-        if (23 < Util.SDK_INT) {
+        if (VERSION_M < Util.SDK_INT) {
             detailPresenter.onViewDetached();
         }
     }

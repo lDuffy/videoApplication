@@ -23,11 +23,15 @@ import rx.functions.Func1;
 import static okhttp3.logging.HttpLoggingInterceptor.Level.BODY;
 import static okhttp3.logging.HttpLoggingInterceptor.Level.NONE;
 
-public class RetrofitUtils {
+@SuppressWarnings("ALL")
+public final class RetrofitUtils {
 
     private static final String CACHE_CONTROL = "Cache-Control";
     private static final Integer RETRY_COUNT = 3;
     private static final Integer EXPONENT_POWER = 2;
+
+    private RetrofitUtils() {
+    }
 
     public static Retrofit provideRetrofit(VideoApplication application) {
         return new Retrofit.Builder()
@@ -60,11 +64,11 @@ public class RetrofitUtils {
         };
     }
 
+    @SuppressWarnings("IOResourceOpenedButNotSafelyClosed")
     private static Cache provideCache() {
         Cache cache = null;
         try {
-            cache = new Cache(new File(VideoApplication.getInstance().getCacheDir(), "http-cache"),
-                    10 * 1024 * 1024); // 10 MB
+            cache = new Cache(new File(VideoApplication.getInstance().getCacheDir(), "http-cache"), 10 * 1024 * 1024); // 10 MB
         } catch (Exception e) {
             Log.e("error", "provideCache: ", e);
         }

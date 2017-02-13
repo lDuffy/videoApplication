@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.google.android.exoplayer2.ExoPlayer;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 
-public class DetailContract {
+public interface DetailContract {
 
     interface DetailView {
         void showToast(String error);
@@ -13,7 +13,7 @@ public class DetailContract {
         void setPlayerView(SimpleExoPlayer player);
     }
 
-    public interface DetailPresenter extends ExoPlayer.EventListener {
+    interface DetailPresenter extends ExoPlayer.EventListener {
         String ARG_FEED = "feed";
         String ARG_POSITION = "position";
         void onViewAttached(DetailView view);

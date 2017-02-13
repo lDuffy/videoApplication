@@ -16,7 +16,7 @@ class Feed : Serializable {
 
     fun getList(position: Int): List<Uri> {
         val list = getMainList()
-        val uris: MutableList<Uri> = mutableListOf<Uri>()
+        val uris: MutableList<Uri> = mutableListOf()
 
         for (i in list!!.indices) {
             val source = list[i].getVideoSource()

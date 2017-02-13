@@ -39,12 +39,12 @@ public final class PlayerUtils {
     }
 
     public static MediaSource buildMediaSource(Uri source, Handler handler) {
-        return new ExtractorMediaSource(source, buildDataSourceFactory(true), new DefaultExtractorsFactory(),
+        return new ExtractorMediaSource(source, buildDataSourceFactory(), new DefaultExtractorsFactory(),
                 handler, null);
     }
 
-    private static DataSource.Factory buildDataSourceFactory(boolean useBandwidthMeter) {
-        return VideoApplication.getInstance().buildDataSourceFactory(useBandwidthMeter ? BANDWIDTH_METER : null);
+    private static DataSource.Factory buildDataSourceFactory() {
+        return VideoApplication.getInstance().buildDataSourceFactory(BANDWIDTH_METER);
     }
 
     public static MediaSource getMediaSource(List<Uri> uris) {
