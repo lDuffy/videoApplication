@@ -24,4 +24,13 @@
         android:layout_gravity="center"
         android:indeterminate="true"
         android:visibility="gone"/>
+    <TextView
+        android:id="@+id/error"
+        android:text="Error Loading content. Please Retry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
 </FrameLayout>

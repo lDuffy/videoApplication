@@ -39,8 +39,9 @@ public class MainPresenterImpl implements MainContract.MainPresenter {
     @Override
     public void fetchDate() {
         view.setProgressVisible(View.VISIBLE);
-
-        subscription = api.list().retryWhen(defaultRetry())
+        view.setErrorTextVisibil(View.GONE);
+        subscription = api.list()
+                .retryWhen(defaultRetry())
                 .compose(RxUtils.newIoToMainTransformer())
                 .subscribe(this::setResponse,
                         this::errorResponse,
@@ -49,6 +50,7 @@ public class MainPresenterImpl implements MainContract.MainPresenter {
 
     void errorResponse(Throwable throwable) {
         view.setProgressVisible(View.GONE);
+        view.setErrorTextVisibil(View.VISIBLE);
         view.showToast(throwable.toString());
     }
 

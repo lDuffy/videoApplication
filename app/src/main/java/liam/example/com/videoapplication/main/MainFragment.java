@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import javax.inject.Inject;
@@ -33,6 +34,7 @@ public class MainFragment extends Fragment implements MainContract.MainView {
     @BindView(R.id.progress) public ProgressBar progressBar;
     @BindView(R.id.search_result) public RecyclerView recyclerView;
     @BindView(R.id.swipeContainer) public SwipeRefreshLayout swipe;
+    @BindView(R.id.error) public TextView error;
 
     @Inject MainContract.MainPresenter mainPresenter;
     @Inject RecyclerViewAdapter viewAdapter;
@@ -108,6 +110,11 @@ public class MainFragment extends Fragment implements MainContract.MainView {
         this.feed = feed;
         viewAdapter.setItems(feed);
         viewAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void setErrorTextVisibil(int visibility) {
+        error.setVisibility(visibility);
     }
 
     private void stopRefreshing() {
