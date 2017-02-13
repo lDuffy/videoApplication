@@ -1,0 +1,38 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.0.6'
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
+        classpath 'com.novoda:bintray-release:0.3.4'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.6'
+        classpath 'org.jetbrains.kotlin:kotlin-android-extensions:1.0.6'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    project.ext {
+        compileSdkVersion=25
+        targetSdkVersion=25
+        buildToolsVersion='25.0.0'
+        releaseRepoName = 'exoplayer'
+        releaseUserOrg = 'google'
+        releaseGroupId = 'com.google.android.exoplayer'
+        releaseVersion = 'r2.2.0'
+        releaseWebsite = 'https://github.com/google/ExoPlayer'
+    }
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">VideoApplication</string>
+    <string name="doubleSpeed">2X</string>
+    <string name="normalspeed">1X</string>
+</resources>

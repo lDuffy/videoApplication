@@ -1,0 +1,551 @@
+{
+  "type": "Collection",
+  "id": "get-your-geek-on",
+  "data": {
+    "entries": {
+      "type": "List",
+      "list": [
+        {
+          "type": "Event",
+          "id": "56311ca34b2a7e26561d4637",
+          "data": {
+            "synopsis": " ",
+            "title": "Real life Jedi! Office Escape",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-RealLifeJediOfficeEscapeExplicit-KKProductions-KKProductions-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311ca34b2a7e26561d4639",
+                  "data": {
+                    "name": "K\u0026K Productions",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://s3-eu-west-1.amazonaws.com/ediflo-staging-gen/cdn/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0wOS0zMF8xNTowNjoxMi5wbmdfMjAxNS0wOS0zMF8xNTowNjoxMi41NDI5MTE%3D.png",
+                    "type": "person"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311ca34b2a7e264d8f90d8",
+              "data": {
+                "duration": 170.838,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-RealLifeJediExplicit-KKProductions-KKProductions-yt.mp4",
+                "view_count": 7,
+                "title": "Real life Jedi! Office Escape - Explicit"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-RealLifeJediOfficeEscapeExplicit-KKProductions-KKProductions-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311d064b2a7e26561d4868",
+          "data": {
+            "synopsis": " ",
+            "title": "Live Action Smash Bros",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-LiveActionSmashBros-ClintonJones-pwnisher-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311d064b2a7e26561d4869",
+                  "data": {
+                    "name": "Clinton Jones",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/clinton-jones.jpg",
+                    "type": "person"
+                  }
+                },
+                {
+                  "type": "Profile",
+                  "id": "5631273b4b2a7e26561d649f",
+                  "data": {
+                    "name": "pwnisher",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/pwnisher.jpg",
+                    "type": "brand"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311d064b2a7e26445665b6",
+              "data": {
+                "duration": 141.251,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-LiveActionSmashBros-ClintonJones-Pwnisher-yt.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-LiveActionSmashBros-ClintonJones-Pwnisher-yt.640_5.jpg",
+                "title": "Live Action Smash Bros"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-LiveActionSmashBros-ClintonJones-pwnisher-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311d454b2a7e26561d4ab3",
+          "data": {
+            "synopsis": " ",
+            "title": "Batman Maybe",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-BatmanMaybe-WesleyFreitas-wekejay-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311d444b2a7e26561d4aaf",
+                  "data": {
+                    "name": "Wesley Freitas",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/wesley-freitas.jpg",
+                    "type": "person"
+                  }
+                },
+                {
+                  "type": "Profile",
+                  "id": "563127a14b2a7e26561d6739",
+                  "data": {
+                    "name": "wekejay",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/wekejay.jpg",
+                    "type": "brand"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311d454b2a7e264d8f93ed",
+              "data": {
+                "duration": 196.31,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-BatmanMaybe-WesleyFreitas-wekejay-00.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-BatmanMaybe-WesleyFreitas-wekejay-00.jpg",
+                "title": "Batman Maybe"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-BatmanMaybe-WesleyFreitas-wekejay-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311d484b2a7e264d8f93fe",
+          "data": {
+            "synopsis": " ",
+            "title": "Bad Days - Fantastic Four",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-BadDaysFantasticFour-WorldOfHeroes-WorldOfHeroes-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56cd63824b2a7e080c2f7f68",
+                  "data": {
+                    "name": "World Of Heroes",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0xMC0yMl8xMDo0NjoxMi5wbmdfMjAxNS0xMC0yMl8xMDo0NjoxMi43NDg5ODg=@2x.png",
+                    "type": "person"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311d484b2a7e26561d4ac9",
+              "data": {
+                "duration": 144.512,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-FantasticFourBadDays-worldofheroes-worldofheroes-yt.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-FantasticFourBadDays-worldofheroes-worldofheroes-yt.jpg",
+                "title": "Bad Days - Fantastic Four"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-BadDaysFantasticFour-WorldOfHeroes-WorldOfHeroes-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311d624b2a7e264d8f9499",
+          "data": {
+            "synopsis": " ",
+            "title": "Superman With a GoPro",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-SupermanWithAGoPro-CorridorDigital-CorridorDigital-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311c6a4b2a7e26561d43ef",
+                  "data": {
+                    "name": "Corridor Digital",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/corridor-digital.jpg",
+                    "type": "person"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311d624b2a7e26561d4b69",
+              "data": {
+                "duration": 162.923,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-SupermanWithAGoPro-CorridorDigital-CorridorDigital-00.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-SupermanWithAGoPro-CorridorDigital-CorridorDigital-00.jpg",
+                "view_count": 1,
+                "title": "Superman With a GoPro"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-SupermanWithAGoPro-CorridorDigital-CorridorDigital-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311c424b2a7e26561d428d",
+          "data": {
+            "synopsis": " ",
+            "title": "Zelda vs Peach",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-ZeldaVsPeach-AndrewMcMurry-Nukazooka-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311c424b2a7e26561d428c",
+                  "data": {
+                    "name": "Andrew McMurry",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/andrew-mcmurry.jpg",
+                    "type": "person"
+                  }
+                },
+                {
+                  "type": "Profile",
+                  "id": "56f641894b2a7e4c610edaf8",
+                  "data": {
+                    "name": "Nukazooka",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0xMC0yMl8xMDo0NjoxMi5wbmdfMjAxNS0xMC0yMl8xMDo0NjoxMi43NDg5ODg=@2x.png",
+                    "type": "brand"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311c424b2a7e264d8f8eca",
+              "data": {
+                "duration": 176.683,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-ZeldaVsPeach-AndrewMcMurry-andrewmfilms-yt.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-ZeldaVsPeach-AndrewMcMurry-andrewmfilms-yt.640_5.jpg",
+                "title": "Zelda vs Peach"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-ZeldaVsPeach-AndrewMcMurry-Nukazooka-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311d624b2a7e26561d4b6b",
+          "data": {
+            "synopsis": " ",
+            "title": "All About That Space",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-AllAboutThatSpace-Creature-Creature-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311d624b2a7e26561d4b6d",
+                  "data": {
+                    "name": "Creature",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://s3-eu-west-1.amazonaws.com/ediflo-staging-gen/cdn/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0wOS0zMF8xNTowNjoxMi5wbmdfMjAxNS0wOS0zMF8xNTowNjoxMi41NDI5MTE%3D.png",
+                    "type": "person"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311d624b2a7e264d8f949b",
+              "data": {
+                "duration": 82,
+                "source": "https://d319559ms2fnpp.cloudfront.net/560113bf4b2a7e04523e9ace/fallout-v-skyrim.mp4",
+                "title": "All About That Space"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-AllAboutThatSpace-Creature-Creature-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311cfe4b2a7e26561d482e",
+          "data": {
+            "synopsis": " ",
+            "title": "Doctor Who Theme",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-DoctorWhoTheme-SonyaBelousova-PlayerPiano-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311cfd4b2a7e26561d4824",
+                  "data": {
+                    "name": "Sonya Belousova",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://s3-eu-west-1.amazonaws.com/ediflo-staging-gen/cdn/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0wOS0zMF8xNTowNjoxMi5wbmdfMjAxNS0wOS0zMF8xNTowNjoxMi41NDI5MTE%3D.png",
+                    "type": "person"
+                  }
+                },
+                {
+                  "type": "Profile",
+                  "id": "563127314b2a7e26561d645d",
+                  "data": {
+                    "name": "PlayerPiano",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/playerpiano.jpg",
+                    "type": "brand"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311cfe4b2a7e264d8f924f",
+              "data": {
+                "duration": 126.891,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-DoctorWhoTheme-SonyaBelousova-PlayerPiano-00.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-DoctorWhoTheme-SonyaBelousova-PlayerPiano-00.jpg",
+                "title": "Doctor Who Theme"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-DoctorWhoTheme-SonyaBelousova-PlayerPiano-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311cfb4b2a7e264d8f923c",
+          "data": {
+            "synopsis": " ",
+            "title": "Star Wars Medley",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-StarWarsMedley-PeterHollensFtLindseyStirling-PeterHollens-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "578746e84b2a7e21e46e9b53",
+                  "data": {
+                    "name": "Peter Hollens",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0xMC0yMl8xMDo0NjoxMi5wbmdfMjAxNS0xMC0yMl8xMDo0NjoxMi43NDg5ODg=@2x.png",
+                    "type": "brand"
+                  }
+                },
+                {
+                  "type": "Profile",
+                  "id": "578746e84b2a7e221a255199",
+                  "data": {
+                    "name": "Peter Hollens ft. Lindsey Stirling",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0xMC0yMl8xMDo0NjoxMi5wbmdfMjAxNS0xMC0yMl8xMDo0NjoxMi43NDg5ODg=@2x.png",
+                    "type": "person"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311cfb4b2a7e26561d4810",
+              "data": {
+                "duration": 275.968,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-StarWarsMedley-PeterHollensFeatLindseyStirling-PeterHollens-yt.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-StarWarsMedley-PeterHollensFeatLindseyStirling-PeterHollens-yt.jpg",
+                "title": "Star Wars Medley"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-StarWarsMedley-PeterHollensFtLindseyStirling-PeterHollens-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311d154b2a7e264d8f92d4",
+          "data": {
+            "synopsis": " ",
+            "title": "Stormtrooper Secrets: Hip Hop Twerk",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-StormtrooperSecretsHipHopTwerk-ScottDavidWinn-ScottDW-00.jpg",
+            "type": "programme",
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311d144b2a7e26561d48f8",
+                  "data": {
+                    "name": "Scott David Winn",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/scott-david-winn.jpg",
+                    "type": "person"
+                  }
+                },
+                {
+                  "type": "Profile",
+                  "id": "563127584b2a7e26561d652f",
+                  "data": {
+                    "name": "ScottDW",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/scottdw.jpg",
+                    "type": "brand"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311d154b2a7e26561d4900",
+              "data": {
+                "duration": 106,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-StormtrooperSecrets HipHopTwerk-ScottDavidWinn-ScottDW-yt.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-StormtrooperSecrets HipHopTwerk-ScottDavidWinn-ScottDW-yt.jpg",
+                "title": "Stormtrooper Secrets: Hip Hop Twerk"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-StormtrooperSecretsHipHopTwerk-ScottDavidWinn-ScottDW-00.jpg"
+              }
+            }
+          }
+        },
+        {
+          "type": "Event",
+          "id": "56311c764b2a7e26561d445b",
+          "data": {
+            "synopsis": " ",
+            "title": "LEGO JURASSIC PARK",
+            "parental_rating": "PG",
+            "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-LegoJurassicPark-PaulHollingsworth-DigitalWizardsStudios-00.jpg",
+            "type": "programme",
+            "tags": [
+              "animation"
+            ],
+            "profiles": {
+              "type": "List",
+              "list": [
+                {
+                  "type": "Profile",
+                  "id": "56311c764b2a7e26561d445d",
+                  "data": {
+                    "name": "Paul Hollingsworth",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/profile-thumbs/paul-hollingsworth.jpg",
+                    "type": "person"
+                  }
+                },
+                {
+                  "type": "Profile",
+                  "id": "56da92244b2a7e4c7525663a",
+                  "data": {
+                    "name": "Digital Wizards Studios",
+                    "subtype": "creator",
+                    "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/560113bf4b2a7e04523e9ace/c3RyaW5nLWNvbnRlbnRzMjAxNS0xMC0yMl8xMDo0NjoxMi5wbmdfMjAxNS0xMC0yMl8xMDo0NjoxMi43NDg5ODg=@2x.png",
+                    "type": "brand"
+                  }
+                }
+              ]
+            },
+            "video": {
+              "type": "Video",
+              "id": "56311c764b2a7e264d8f8fd5",
+              "data": {
+                "duration": 177.664,
+                "source": "https://d319559ms2fnpp.cloudfront.net/C3-LegoJurassicPark-PaulHollingsworth-digitalwizardz-yt.mp4",
+                "thumbnail_image": "https://d319559ms2fnpp.cloudfront.net/C3-LegoJurassicParkCUT-PaulHollingsworth-digitalwizardz-yt.jpg",
+                "view_count": 2,
+                "title": "LEGO JURASSIC PARK"
+              }
+            },
+            "resources": {
+              "video-thumbnail": {
+                "type": "image",
+                "value": "https://d319559ms2fnpp.cloudfront.net/C3-LegoJurassicPark-PaulHollingsworth-DigitalWizardsStudios-00.jpg"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "entry_count": 11,
+    "title": "Get Your Geek On",
+    "description": "From comic books to cult movies to your favorite video games, these creators celebrate all things geek!",
+    "code": "get-your-geek-on"
+  }
+}
