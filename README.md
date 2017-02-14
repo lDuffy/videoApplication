@@ -1,13 +1,15 @@
 ## Synopsis
 
-Test application for fetching and playing videos from a specified feed. The app displays fetched
-items in a resizable grid view. When the user clicks an item the media player opens and plays the video. 
+Test application for fetching and playing videos from json feed. The app displays fetched items
+in a resizable grid view. When the user clicks an item a media player opens and plays the video.
 
-The application has a fast-forward feature whereby when the user presses the fast-forward button
-playback time is doubled.  The application uses a mix of Kotlin and java and adheres to MVP in both
-main and detail views. The app also makes its network request using RxJava, Retrofit and OkHttp.
-The network request has a retry policy of 3 times with exponential back-off.
-OkHttp also maintains an offline cache so unneccessary network requests will not be made.
+The application has a fast-forward feature whereby when the user presses the fast-forward button playback time is doubled.
+
+The application uses a mix of Kotlin and java and adheres to MVP in both main and detail views.
+The app also makes its network request using RxJava, Retrofit and OkHttp. The network request has a retry
+policy of 3 times with exponential back-off. OkHttp also maintains an offline cache so unnecessary
+network requests will not be made.
+
 
 ## Libraries
 
