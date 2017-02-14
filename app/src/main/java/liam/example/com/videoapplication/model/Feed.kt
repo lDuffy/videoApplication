@@ -4,7 +4,7 @@ import android.net.Uri
 import java.io.Serializable
 import java.util.*
 
-class Feed : Serializable {
+open class Feed : Serializable {
 
     var id: String? = null
     var data: DataMain? = null

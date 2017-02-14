@@ -1,11 +1,8 @@
 package liam.example.com.videoapplication.detail;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -80,14 +77,13 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
     private void initializePlayer() {
         if (null == player) {
 
-            player = PlayerUtils.getPlayer(context);
+            player = getPlayere();
             player.setPlaybackSpeed(1.0f);
             player.addListener(this);
             view.setPlayerView(player);
             player.setPlayWhenReady(true);
 
-            List<Uri> uris = feed.getList(position);
-            MediaSource mediaSource = PlayerUtils.getMediaSource(uris);
+            MediaSource mediaSource = getMediaSource();
             boolean haveResumePosition = C.INDEX_UNSET != resumeWindow;
             if (haveResumePosition) {
                 player.seekTo(resumeWindow, resumePosition);
@@ -95,6 +91,14 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
             player.prepare(mediaSource, false, false);
         }
 
+    }
+
+    public MediaSource getMediaSource() {
+        return PlayerUtils.getMediaSource(feed.getList(position));
+    }
+
+    public SimpleExoPlayer getPlayere(){
+        return PlayerUtils.getPlayer(context);
     }
 
 
