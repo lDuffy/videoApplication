@@ -2,7 +2,6 @@ package liam.example.com.videoapplication;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
-import android.support.test.espresso.contrib.RecyclerViewActions;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.Before;
@@ -14,9 +13,6 @@ import io.appflate.restmock.RequestsVerifier;
 import liam.example.com.videoapplication.main.MainActivity;
 
 import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static io.appflate.restmock.utils.RequestMatchers.pathContains;
 import static org.junit.Assert.assertEquals;
@@ -45,12 +41,10 @@ public class MainFragmentInstrumentedTest {
 
     @Test
     public void shouldPopulateListAfterNetworkRequest() {
-        RESTMockServer.whenGET(pathContains("collections/get-your-geek-on?expand=2")).thenReturnFile("test_feed.json");
+        RESTMockServer.whenGET(pathContains("collections/get-your-geek-on")).thenReturnFile("test_feed.json");
         activityRule.launchActivity(null);
         onView(withId(R.id.search_result)).check(new RecyclerViewPopulatedAssertion(11));
-        RequestsVerifier.verifyGET(pathContains("collections/get-your-geek-on?expand=2")).invoked();
-        onView(withId(R.id.search_result)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
-        onView(withId(R.id.root)).check(matches(isDisplayed()));
+        RequestsVerifier.verifyGET(pathContains("collections/get-your-geek-on")).invoked();
 
     }
 }

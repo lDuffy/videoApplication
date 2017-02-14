@@ -16,9 +16,6 @@ import liam.example.com.videoapplication.dagger.components.AppComponent;
 import liam.example.com.videoapplication.dagger.components.DaggerAppComponent;
 import liam.example.com.videoapplication.dagger.modules.AppModule;
 
-/**
- * Created by lduf0001 on 10/02/2017.
- */
 public class VideoApplication extends Application {
 
     private static VideoApplication instance;

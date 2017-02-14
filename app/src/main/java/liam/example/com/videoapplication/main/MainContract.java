@@ -2,10 +2,6 @@ package liam.example.com.videoapplication.main;
 
 import liam.example.com.videoapplication.model.Feed;
 
-/**
- * Created by lduf0001 on 06/10/2016.
- */
-
 public class MainContract {
 
     interface MainView {

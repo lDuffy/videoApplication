@@ -26,6 +26,9 @@ android {
             testCoverageEnabled true
         }
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -85,7 +88,4 @@ dependencies {
 
     compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.6'
 
-}
-repositories {
-    mavenCentral()
 }
