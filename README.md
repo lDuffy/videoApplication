@@ -32,4 +32,9 @@ Clone project. Open in Android Studio. build.
 
 Uses Mockito and Junit4 for unit testing. Espresso and RESTMock used for integration testing.
 
+For combined unit/integration test coverage report connect device and run ./gradlew jacocoTestReport.
+
+report will be generated at file:///path_to_project/app/build/reports/jacoco/jacocoTestReport/html/index.html
+
+
 

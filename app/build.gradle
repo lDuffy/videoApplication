@@ -51,7 +51,23 @@ android {
             html.enabled = true
         }
 
-        def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+        def fileFilter = [
+                '**/R.class',
+                '**/R$*.class',
+                '**/BuildConfig.*',
+                '**/Manifest*.*',
+                '**/*Test*.*',
+                '**/*$ViewInjector*.*',
+                '**/*_MembersInjector.class',
+                '**/*_ViewBinding.class',
+                '**/Dagger*Component.class',
+                '**/Dagger*Component$Builder.class',
+                '**/*Module_*Factory.class',
+                '**/*$ViewBinder*.*',
+                '**/*_MembersInjector*.*',
+                '**/*_Factory*.*',
+                'android/**/*.*',
+        ]
         def debugTree = fileTree(dir: "${buildDir}/intermediates/classes/debug", excludes: fileFilter)
         def mainSrc = "${project.projectDir}/src/main/java"
 
