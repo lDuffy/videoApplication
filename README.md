@@ -18,6 +18,7 @@ network requests will not be made.
 * ExoPlayer (unofficial) : media player.
 * RxJava : reactive programming.
 * Mockito/Junit : testing.
+* Espresso : testing.
 * ButterKnife : view injection.
 * Dagger2 : dependency injection.
 * Picasso : image library.

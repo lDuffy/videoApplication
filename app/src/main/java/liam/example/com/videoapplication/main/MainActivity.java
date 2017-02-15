@@ -10,7 +10,7 @@ import liam.example.com.videoapplication.VideoApplication;
 import liam.example.com.videoapplication.dagger.components.ActivityComponent;
 import liam.example.com.videoapplication.dagger.components.DaggerActivityComponent;
 import liam.example.com.videoapplication.dagger.modules.ActivityModule;
-import liam.example.com.videoapplication.utils.Launcher;
+import liam.example.com.videoapplication.nav.Launcher;
 
 /**
  * Activity container for main/detail fragmnt

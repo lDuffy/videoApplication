@@ -34,7 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
         if (null == feed) {
             return;
         }
-        EntryData data = feed.getData().getEntries().getList()[position].getData();
+        EntryData data = feed.getMainList().get(position).getData();
         Picasso.with(context).load(data.getThumbnail_image()).into(holder.photo);
         holder.title.setText(data.getTitle());
 

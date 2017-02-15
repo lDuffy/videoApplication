@@ -14,7 +14,7 @@ open class Feed : Serializable {
         return (data!!.entries!!.list!!.asList())
     }
 
-    fun getList(position: Int): List<Uri> {
+    fun getListOrderedByPosition(position: Int): List<Uri> {
         val list = getMainList()
         val uris: MutableList<Uri> = mutableListOf()
 

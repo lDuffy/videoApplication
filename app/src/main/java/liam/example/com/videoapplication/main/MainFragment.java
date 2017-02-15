@@ -23,7 +23,7 @@ import liam.example.com.videoapplication.R;
 import liam.example.com.videoapplication.adapter.RecyclerViewAdapter;
 import liam.example.com.videoapplication.dagger.components.ActivityComponent;
 import liam.example.com.videoapplication.model.Feed;
-import liam.example.com.videoapplication.utils.Launcher;
+import liam.example.com.videoapplication.nav.Launcher;
 import liam.example.com.videoapplication.utils.RecycleViewClickListener;
 
 import static android.view.View.GONE;
@@ -39,9 +39,8 @@ public class MainFragment extends Fragment implements MainContract.MainView {
     @Inject MainContract.MainPresenter mainPresenter;
     @Inject RecyclerViewAdapter viewAdapter;
     @Inject Launcher launcher;
-    GridLayoutManager gridLayoutManager;
 
-    Feed feed;
+    private Feed feed;
 
     public static Fragment newInstance() {
         return new MainFragment();
@@ -58,7 +57,9 @@ public class MainFragment extends Fragment implements MainContract.MainView {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        mainPresenter.onViewAttached(this);
+        return view;
     }
 
     @Override
@@ -67,12 +68,12 @@ public class MainFragment extends Fragment implements MainContract.MainView {
         ButterKnife.bind(this, view);
         setupViewAdapter();
         swipe.setOnRefreshListener(mainPresenter::fetchDate);
+        mainPresenter.fetchDate();
     }
 
     private void setupViewAdapter() {
-        gridLayoutManager = new GridLayoutManager(getActivity(), GRID_SIZE);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), GRID_SIZE));
         recyclerView.setAdapter(viewAdapter);
         recyclerView.addOnItemTouchListener(getListener());
     }
@@ -91,7 +92,6 @@ public class MainFragment extends Fragment implements MainContract.MainView {
         super.onResume();
         showActionBar();
         mainPresenter.onViewAttached(this);
-        mainPresenter.fetchDate();
     }
 
     @Override

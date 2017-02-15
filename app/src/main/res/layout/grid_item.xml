@@ -2,7 +2,7 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content">
 
-    <liam.example.com.videoapplication.SquareImageView
+    <liam.example.com.videoapplication.utils.SquareImageView
         android:id="@+id/photo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

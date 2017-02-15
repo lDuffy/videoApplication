@@ -1,4 +1,4 @@
-package liam.example.com.videoapplication.utils;
+package liam.example.com.videoapplication.nav;
 
 
 import liam.example.com.videoapplication.model.Feed;

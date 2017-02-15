@@ -1,36 +1,39 @@
 package liam.example.com.videoapplication.detail;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 
 import liam.example.com.videoapplication.R;
 import liam.example.com.videoapplication.model.Feed;
-import liam.example.com.videoapplication.utils.PlayerUtils;
+import liam.example.com.videoapplication.player.IExoPlayer;
 
 public class DetailPresenterImpl implements DetailContract.DetailPresenter {
     private final Context context;
+    private final IExoPlayer player;
     private DetailContract.DetailView view;
-    private SimpleExoPlayer player;
     private int resumeWindow;
     private int position;
     private long resumePosition;
     private Feed feed;
 
     @Inject
-    public DetailPresenterImpl(Context context) {
+    public DetailPresenterImpl(Context context, IExoPlayer player) {
         this.context = context;
+        this.player = player;
     }
 
     @Override
@@ -55,12 +58,12 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
     @Override
     public void updateResumePosition() {
         resumeWindow = player.getCurrentWindowIndex();
-        resumePosition = player.isCurrentWindowSeekable() ? Math.max(0, player.getCurrentPosition()) : C.TIME_UNSET;
+        resumePosition = player.getResumePosition();
     }
 
     @Override
     public void setArguments(Bundle bundle) {
-        if (bundle != null) {
+        if (null != bundle) {
             feed = (Feed) bundle.getSerializable(ARG_FEED);
             position = bundle.getInt(ARG_POSITION);
 
@@ -74,33 +77,27 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
         resumePosition = C.TIME_UNSET;
     }
 
-    private void initializePlayer() {
-        if (null == player) {
+    private synchronized void initializePlayer() {
+        if (player.isPlayerNull()) {
 
-            player = getPlayere();
-            player.setPlaybackSpeed(1.0f);
-            player.addListener(this);
-            view.setPlayerView(player);
-            player.setPlayWhenReady(true);
+            player.init(context,this);
+            player.setMediaSource(getList());
 
-            MediaSource mediaSource = getMediaSource();
+            view.setPlayerView(player.getSimpleExoPlayer());
+
             boolean haveResumePosition = C.INDEX_UNSET != resumeWindow;
             if (haveResumePosition) {
                 player.seekTo(resumeWindow, resumePosition);
             }
-            player.prepare(mediaSource, false, false);
+            player.prepare();
         }
 
     }
 
-    public MediaSource getMediaSource() {
-        return PlayerUtils.getMediaSource(feed.getList(position));
+    @NonNull
+    public List<Uri> getList() {
+        return feed.getListOrderedByPosition(position);
     }
-
-    public SimpleExoPlayer getPlayere(){
-        return PlayerUtils.getPlayer(context);
-    }
-
 
     @Override
     public void onTimelineChanged(Timeline timeline, Object manifest) {
@@ -109,7 +106,7 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
 
     @Override
     public void onTracksChanged(TrackGroupArray trackGroups, TrackSelectionArray trackSelections) {
-        //unused
+        incrementPosition();
     }
 
     @Override
@@ -133,12 +130,16 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
 
     @Override
     public void onPlayerError(ExoPlaybackException error) {
-        view.showToast("Error Playing Video");
-        position += 1;
+        view.showToast(context.getString(R.string.video_playback_error));
+        incrementPosition();
         clearResumePosition();
-        player = null;
+        player.clearExoPLayer();
         initializePlayer();
 
+    }
+
+    private void incrementPosition() {
+        position += 1;
     }
 
     @Override

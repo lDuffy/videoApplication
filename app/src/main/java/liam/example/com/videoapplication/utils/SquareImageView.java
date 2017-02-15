@@ -1,4 +1,4 @@
-package liam.example.com.videoapplication;
+package liam.example.com.videoapplication.utils;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -107,6 +107,9 @@ import com.google.android.exoplayer2.video.MediaCodecVideoRenderer;
  */
 public interface ExoPlayer {
 
+
+
+
   /**
    * Listener of changes in player state.
    */

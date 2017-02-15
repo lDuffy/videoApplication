@@ -2,7 +2,10 @@ package liam.example.com.videoapplication;
 
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -10,14 +13,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.source.MediaSource;
-
 import liam.example.com.videoapplication.detail.DetailContract;
 import liam.example.com.videoapplication.detail.DetailPresenterImpl;
-import liam.example.com.videoapplication.model.Feed;
+import liam.example.com.videoapplication.player.IExoPlayer;
 
-import static liam.example.com.videoapplication.detail.DetailContract.DetailPresenter.ARG_FEED;
 import static liam.example.com.videoapplication.detail.DetailContract.DetailPresenter.ARG_POSITION;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.doReturn;
@@ -28,28 +27,27 @@ import static org.mockito.Mockito.verify;
 public class DetailPresenterTest {
 
     DetailPresenterImpl detailPresenter;
-    @Mock Context mockContext;
-    @Mock MediaSource mockMediaSource;
-    @Mock SimpleExoPlayer mockPLayer;
+
     @Mock DetailContract.DetailView mockView;
+    @Mock IExoPlayer mockExoPlayer;
+    @Mock Context mockContext;
     @Mock Bundle mockBundle;
-    @Mock Feed testFeed;
+    @Mock List<Uri> list;
 
     @Before
     public void setUp() throws Exception {
-        detailPresenter = spy(new DetailPresenterImpl(mockContext));
-        doReturn(testFeed).when(mockBundle).getSerializable(eq(ARG_FEED));
+        detailPresenter = spy(new DetailPresenterImpl(mockContext, mockExoPlayer));
         doReturn(1).when(mockBundle).getInt(eq(ARG_POSITION));
+        doReturn(list).when(detailPresenter).getList();
         detailPresenter.setArguments(mockBundle);
 
     }
     
     @Test
     public void playerShouldPrepareOnViewAttached(){
-        doReturn(mockMediaSource).when(detailPresenter).getMediaSource();
-        doReturn(mockPLayer).when(detailPresenter).getPlayere();
+        doReturn(true).when(mockExoPlayer).isPlayerNull();
         detailPresenter.onViewAttached(mockView);
-        verify(mockPLayer).prepare(mockMediaSource,false, false);
+        verify(mockExoPlayer).prepare();
     }
 
 

@@ -3,7 +3,6 @@ package liam.example.com.videoapplication.dagger.components;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import liam.example.com.videoapplication.VideoApplication;
 import liam.example.com.videoapplication.dagger.modules.AppModule;
 import liam.example.com.videoapplication.rest.FeedApi;
 
@@ -15,5 +14,5 @@ import liam.example.com.videoapplication.rest.FeedApi;
 @Component(modules = {AppModule.class})
 public interface AppComponent {
     FeedApi feedApi();
-    VideoApplication application();
+
 }

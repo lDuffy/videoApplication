@@ -8,9 +8,10 @@ import liam.example.com.videoapplication.detail.DetailPresenterImpl;
 import liam.example.com.videoapplication.main.MainActivity;
 import liam.example.com.videoapplication.main.MainContract;
 import liam.example.com.videoapplication.main.MainPresenterImpl;
+import liam.example.com.videoapplication.nav.AppLauncher;
+import liam.example.com.videoapplication.nav.Launcher;
+import liam.example.com.videoapplication.player.ExoPlayerImpl;
 import liam.example.com.videoapplication.rest.FeedApi;
-import liam.example.com.videoapplication.utils.AppLauncher;
-import liam.example.com.videoapplication.utils.Launcher;
 
 
 @Module
@@ -29,7 +30,7 @@ public class ActivityModule {
 
     @Provides
     public DetailContract.DetailPresenter providesDetailPresenter() {
-        return new DetailPresenterImpl(activity);
+        return new DetailPresenterImpl(activity, new ExoPlayerImpl());
     }
 
     @Provides
