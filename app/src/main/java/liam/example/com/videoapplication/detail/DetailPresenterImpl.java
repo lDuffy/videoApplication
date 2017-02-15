@@ -80,7 +80,7 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
     private synchronized void initializePlayer() {
         if (player.isPlayerNull()) {
 
-            player.init(context,this);
+            player.init(context, this);
             player.setMediaSource(getList());
 
             view.setPlayerView(player.getSimpleExoPlayer());
@@ -139,7 +139,7 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
     }
 
     private void incrementPosition() {
-        position += 1;
+        position = (position + 2) % feed.getListLength();
     }
 
     @Override
