@@ -139,7 +139,7 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
     }
 
     private void incrementPosition() {
-        position = (position + 2) % feed.getListLength();
+        position = (position + 1) % feed.getListLength();
     }
 
     @Override
