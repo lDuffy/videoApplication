@@ -77,7 +77,7 @@ public class DetailPresenterImpl implements DetailContract.DetailPresenter {
         resumePosition = C.TIME_UNSET;
     }
 
-    private synchronized void initializePlayer() {
+    private void initializePlayer() {
         if (player.isPlayerNull()) {
 
             player.init(context, this);
